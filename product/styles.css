@@ -11,6 +11,41 @@ body {
   background-color: var(--color-secondary);
   font-size: 14px;
 }
-
-@media screen and (min-width: 376px) and (max-width: 1440px) {
+.container {
+  display: flex;
+  margin: auto;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.image {
+  grid-column: 1/2;
+}
+.image img {
+  max-width: 100%;
+}
+.content {
+  grid-column: 2/3;
+}
+.content h2 {
+}
+.content h1 {
+}
+.content p {
+}
+.price1 {
+}
+.price2 {
+}
+.content button {
+}
+@media screen and (max-width: 375px) {
 }
