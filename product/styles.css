@@ -6,7 +6,6 @@
   --color-neutral3: hsl(0, 0%, 100%);
 }
 body {
-  font-family: "Fraunces", serif;
   font-family: "Montserrat", sans-serif;
   background-color: var(--color-secondary);
   font-size: 14px;
@@ -34,18 +33,61 @@ body {
 }
 .content {
   grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: var(--color-neutral3);
 }
 .content h2 {
+  text-transform: uppercase;
+  align-self: flex-start;
+  color: var(--color-neutral2);
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 3px;
 }
 .content h1 {
+  align-self: flex-start;
+  color: var(--color-neutral1);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0;
 }
 .content p {
+  align-self: flex-start;
+  color: var(--color-neutral2);
+  line-height: 25px;
+}
+.price {
+  align-self: flex-start;
+  display: flex;
 }
 .price1 {
+  margin-right: 15px;
+  color: var(--color-primary);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 .price2 {
+  text-decoration: line-through;
+  color: var(--color-neutral2);
+  align-self: center;
 }
 .content button {
+  background-color: var(--color-primary);
+  border-radius: 15px;
+  border: 0rem;
+  width: 100%;
+  min-height: 50px;
+  color: var(--color-neutral3);
+  font-weight: 700;
+}
+.content button img {
+  margin-right: 10px;
 }
 @media screen and (max-width: 375px) {
 }
