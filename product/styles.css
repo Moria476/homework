@@ -91,6 +91,35 @@ html {
 .content button img {
   margin-right: 10px;
 }
+@media screen and (max-width: 660px) {
+  html {
+    font-size: calc(10px + (14 - 10) * ((100vw - 500px) / (660 - 500)));
+  }
+  .content {
+    padding: 1rem;
+  }
+  .content button {
+    min-height: 4rem;
+  }
+  .content button img {
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: calc(9px + (12 - 10) * ((100vw - 375px) / (500 - 375)));
+  }
+  .content button {
+    min-height: 2rem;
+  }
+  .content h1 {
+    line-height: 3rem;
+  }
+  .content p {
+    line-height: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 376px) {
   html {
     font-size: 12px;
@@ -100,7 +129,7 @@ html {
   }
   .wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: 40% 60%;
+    grid-template-rows: auto 55%;
   }
   .image {
     grid-column: 1/2;
@@ -117,6 +146,10 @@ html {
   .content {
     grid-column: 1/2;
     grid-row: 2/3;
-    padding: 20px;
+    padding: 2rem;
+  }
+  .content button {
+    width: 100%;
+    min-height: 4rem;
   }
 }
