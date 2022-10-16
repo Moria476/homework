@@ -1,3 +1,26 @@
 .layout {
   max-width: 1200px;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+.layout__left-sidebar {
+  grid-column: 1/2;
+}
+.sidebar-menu {
+}
+.layout__feed {
+  grid-column: 2/3;
+}
+.tweet {
+}
+.layout__right-sidebar-container {
+  grid-column: 3/4;
+}
+.layout__right-sidebar {
+}
+.search-bar {
+}
+.trends-for-you {
+}
+.who-to-follow {
 }

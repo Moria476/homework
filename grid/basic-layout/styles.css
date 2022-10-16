@@ -6,18 +6,16 @@
 
 main {
   height: 100vh;
-}
-.wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 7.5% 80% 7.5%;
+  grid-template-rows: 50px auto 50px;
   grid-template-areas:
     "header header header header"
     "sidebar article  article aside"
     "footer footer footer footer";
   gap: 20px;
-  height: 100%;
 }
+
 header {
   grid-area: header;
   background-color: aqua;
