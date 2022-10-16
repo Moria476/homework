@@ -1,0 +1,40 @@
+* {
+  font-size: x-large;
+  font-weight: bold;
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 7.5% 80% 7.5%;
+  grid-template-areas:
+    "header header header header"
+    "sidebar article  article aside"
+    "footer footer footer footer";
+  gap: 20px;
+  height: 100%;
+}
+header {
+  grid-area: header;
+  background-color: aqua;
+}
+article {
+  grid-area: article;
+  background-color: green;
+}
+aside {
+  grid-area: aside;
+  background-color: yellow;
+}
+nav {
+  grid-area: sidebar;
+  background-color: orangered;
+}
+footer {
+  grid-area: footer;
+  background-color: blue;
+}
