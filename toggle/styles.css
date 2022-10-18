@@ -127,9 +127,8 @@ body {
 .card__3__content__price span:nth-of-type(1) {
   font-size: 1.5rem;
 }
-.card__1__content__price span:nth-of-type(2),
-.card__2__content__price span:nth-of-type(2),
-.card__3__content__price span:nth-of-type(2) {
+.price__1,
+.price__2 {
   font-size: 2.5rem;
 }
 .card__1__content__price,

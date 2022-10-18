@@ -27,19 +27,19 @@
         <div class="switch__wrapper">
           <span>Annually</span>
           <label class="switch">
-            <input type="checkbox" />
+            <input type="checkbox" id="Box" onclick="check()" ; />
             <span class="slider round"></span>
           </label>
           <span>Monthly</span>
         </div>
       </div>
-
       <div class="card__1">
         <div class="card__1__content">
           <h2>Basic</h2>
           <div class="card__1__content__price">
             <span>$</span>
-            <span>19.99</span>
+            <span class="price__1">19.99</span>
+            <span class="price__2">199.99</span>
           </div>
           <div class="p__div">
             <p>500 GB Storage</p>
@@ -53,13 +53,13 @@
           <button>Learn More</button>
         </div>
       </div>
-
       <div class="card__2">
         <div class="card__2__content">
           <h2>Professional</h2>
           <div class="card__2__content__price">
             <span>$</span>
-            <span>24.99</span>
+            <span class="price__1">24.99</span>
+            <span class="price__2">249.99</span>
           </div>
           <div class="p__div">
             <p>1 TB Storage</p>
@@ -73,13 +73,13 @@
           <button>Learn More</button>
         </div>
       </div>
-
       <div class="card__3">
         <div class="card__3__content">
           <h2>Master</h2>
           <div class="card__3__content__price">
             <span>$</span>
-            <span>39.99</span>
+            <span class="price__1">39.99</span>
+            <span class="price__2">399.99</span>
           </div>
           <div class="p__div">
             <p>2 TB Storage</p>
@@ -94,5 +94,23 @@
         </div>
       </div>
     </div>
+    <script>
+      function check() {
+        var checkBox = document.getElementById("Box");
+        var price1 = document.getElementsByClassName("price__1");
+        var price2 = document.getElementsByClassName("price__2");
+
+        for (var i = 0; i < price1.length; i++) {
+          if (checkBox.checked == true) {
+            price1[i].style.display = "block";
+            price2[i].style.display = "none";
+          } else if (checkBox.checked == false) {
+            price1[i].style.display = "none";
+            price2[i].style.display = "block";
+          }
+        }
+      }
+      check();
+    </script>
   </body>
 </html>
