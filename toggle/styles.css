@@ -49,7 +49,6 @@ body {
   align-self: center;
   justify-self: center;
   padding: 2vw;
-  gap: 1vw;
 }
 .pricing h1,
 .switch__wrapper {
@@ -75,8 +74,10 @@ body {
   box-shadow: 4px 4px 4px 4px var(--color-neutral2, 0.6);
   width: 90%;
   height: 80%;
-  background-color: var(--color-white);
+  background: var(--color-white);
   padding: 1vw;
+  align-self: center;
+  justify-self: center;
 }
 .card__1__content,
 .card__2__content,
@@ -147,7 +148,31 @@ body {
   font-size: 1rem;
   color: var(--color-neutral3);
 }
-
+.card__1:hover,
+.card__2:hover,
+.card__3:hover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--linear-gradient-primary-secondary);
+}
+.card__1:hover button,
+.card__2:hover button,
+.card__3:hover button {
+  background: var(--color-white);
+  color: var(--color-neutral3);
+}
+.card__1:hover h2,
+.card__1:hover p,
+.card__2:hover h2,
+.card__2:hover p,
+.card__3:hover h2,
+.card__3:hover p,
+.card__1:hover .card__1__content__price,
+.card__2:hover .card__2__content__price,
+.card__3:hover .card__3__content__price {
+  color: var(--color-white);
+}
 /* SWITCH */
 /* The switch - the box around the slider */
 .switch {
