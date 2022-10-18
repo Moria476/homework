@@ -181,14 +181,12 @@ body {
   width: 60px;
   height: 34px;
 }
-
 /* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
 /* The slider */
 .slider {
   position: absolute;
@@ -201,7 +199,6 @@ body {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 .slider:before {
   position: absolute;
   content: "";
@@ -213,7 +210,6 @@ body {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 input:checked + .slider {
   background: var(--color-neutral4);
 }
@@ -227,78 +223,47 @@ input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
-
 /* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
-
 .slider.round:before {
   border-radius: 50%;
 }
 @media screen and (max-width: 376px) {
+  .wrapper {
+    max-width: 360px;
+    display: grid;
+    grid-template-areas:
+      "Pricing"
+      "card1"
+      "card2"
+      "card3";
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+    margin: 0 auto;
+    height: 90%;
+    align-self: center;
+    justify-self: center;
+    padding: 4vw;
+    padding-bottom: 20vw;
+    gap: 20px;
+  }
+  .card__1,
+  .card__2,
+  .card__3 {
+    width: 80%;
+    height: 500px;
+  }
+  .pricing {
+    width: 100%;
+  }
+  .card__1:hover,
+  .card__2:hover,
+  .card__3:hover {
+    position: relative;
+    width: 80%;
+    height: 500px;
+    background: var(--linear-gradient-primary-secondary);
+  }
 }
-
-/* @media screen and (max-width: 660px) {
-    html {
-      font-size: calc(10px + (14 - 10) * ((100vw - 500px) / (660 - 500)));
-    }
-    .content {
-      padding: 1rem;
-    }
-    .content button {
-      min-height: 4rem;
-    }
-    .content button img {
-      margin-right: 5px;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    html {
-      font-size: calc(9px + (12 - 10) * ((100vw - 375px) / (500 - 375)));
-    }
-    .content button {
-      min-height: 2rem;
-    }
-    .content h1 {
-      line-height: 3rem;
-    }
-    .content p {
-      line-height: 1.5rem;
-    }
-  }
-  
-  @media screen and (max-width: 376px) {
-    html {
-      font-size: 12px;
-    }
-    .container {
-      width: auto;
-    }
-    .wrapper {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto 55%;
-    }
-    .image {
-      grid-column: 1/2;
-      grid-row: 1/2;
-    }
-    .img__mobile {
-      grid-column: 1/2;
-      display: block;
-      max-width: 100%;
-    }
-    .img__desktop {
-      display: none;
-    }
-    .content {
-      grid-column: 1/2;
-      grid-row: 2/3;
-      padding: 2rem;
-    }
-    .content button {
-      width: 100%;
-      min-height: 4rem;
-    }
-  }
-   */
