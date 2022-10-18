@@ -1,3 +1,22 @@
+:root {
+  --color-primary: hsl(236, 72%, 79%);
+  --color-secondary: hsl(237, 63%, 64%);
+  --color-neutral1: hsl(240, 78%, 98%);
+  --color-neutral2: hsl(234, 14%, 74%);
+  --color-neutral3: hsl(233, 13%, 49%);
+  --color-neutral4: hsl(232, 13%, 33%);
+  --color-white: hsl(255, 100%, 100%);
+  --linear-gradient-primary-secondary: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+}
+html {
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  background: var(--color-neutral1);
+}
 body {
   margin: 0px;
 }
@@ -16,13 +35,6 @@ body {
   position: absolute;
   bottom: 0px;
 }
-.container {
-  display: flex;
-
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
 
 .wrapper {
   max-width: 1000px;
@@ -37,16 +49,52 @@ body {
   align-self: center;
   justify-self: center;
   padding: 2vw;
+  gap: 1vw;
 }
-.pricing,
+.pricing h1,
+.switch__wrapper {
+  padding: 20px;
+  margin: 0px;
+}
+.pricing h1 {
+  color: var(--color-neutral3);
+}
+.switch__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.switch__wrapper span {
+  color: var(--color-neutral2);
+}
 .card__1,
 .card__2,
 .card__3 {
-  align-self: center;
-  justify-self: center;
+  border: hidden;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px 4px var(--color-neutral2, 0.6);
+  width: 90%;
+  height: 80%;
+  background-color: var(--color-white);
+  padding: 1vw;
+}
+.card__1__content,
+.card__2__content,
+.card__3__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 .pricing {
+  width: 30%;
   grid-area: Pricing;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
 }
 .card__1 {
   grid-area: card1;
@@ -57,94 +105,116 @@ body {
 .card__3 {
   grid-area: card3;
 }
+.card__1__content button,
+.card__2__content button,
+.card__3__content button {
+  text-transform: uppercase;
+  width: 80%;
+  min-height: 35px;
+  background: var(--linear-gradient-primary-secondary);
+  border: hidden;
+  border-radius: 5px;
+  color: var(--color-white);
+  font-weight: 700;
+}
+.p__div {
+  border-top: 1px solid rgb(166, 182, 206);
+  border-bottom: 1px solid rgb(166, 182, 206);
+  width: 80%;
+}
+.card__1__content__price span:nth-of-type(1),
+.card__2__content__price span:nth-of-type(1),
+.card__3__content__price span:nth-of-type(1) {
+  font-size: 1.5rem;
+}
+.card__1__content__price span:nth-of-type(2),
+.card__2__content__price span:nth-of-type(2),
+.card__3__content__price span:nth-of-type(2) {
+  font-size: 2.5rem;
+}
+.card__1__content__price,
+.card__2__content__price,
+.card__3__content__price {
+  display: flex;
+  align-items: center;
+  color: var(--color-neutral4);
+}
+.card__1__content h2,
+.card__1__content p,
+.card__2__content h2,
+.card__2__content p,
+.card__3__content h2,
+.card__3__content p {
+  font-size: 1rem;
+  color: var(--color-neutral3);
+}
 
-/* :root {
-    --color-primary: hsl(158, 36%, 37%);
-    --color-secondary: hsl(30, 38%, 92%);
-    --color-neutral1: hsl(212, 21%, 14%);
-    --color-neutral2: hsl(228, 12%, 48%);
-    --color-neutral3: hsl(0, 0%, 100%);
-  }
-  html {
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    background-color: var(--color-secondary);
-  }
+/* SWITCH */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
 
-  .wrapper {
-    max-width: 700px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
-    border-radius: 25px;
-    overflow: hidden;
-  }
-  .img__desktop {
-    grid-column: 1/2;
-    display: block;
-    max-width: 100%;
-  }
-  .img__mobile {
-    display: none;
-  }
-  .content {
-    grid-column: 2/3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-    background-color: var(--color-neutral3);
-  }
-  .content h2 {
-    text-transform: uppercase;
-    align-self: flex-start;
-    color: var(--color-neutral2);
-    font-weight: 400;
-    font-size: 1rem;
-    letter-spacing: 3px;
-  }
-  .content h1 {
-    align-self: flex-start;
-    color: var(--color-neutral1);
-    font-family: "Fraunces", serif;
-    font-weight: 700;
-    font-size: 3rem;
-    margin: 0;
-  }
-  .content p {
-    align-self: flex-start;
-    color: var(--color-neutral2);
-    line-height: 25px;
-  }
-  .price {
-    align-self: flex-start;
-    display: flex;
-  }
-  .price__dropped {
-    margin-right: 15px;
-    color: var(--color-primary);
-    font-family: "Fraunces", serif;
-    font-weight: 700;
-    font-size: 2.5rem;
-  }
-  .price__normal {
-    text-decoration: line-through;
-    color: var(--color-neutral2);
-    align-self: center;
-  }
-  .content button {
-    background-color: var(--color-primary);
-    border-radius: 15px;
-    border: 0rem;
-    width: 100%;
-    min-height: 50px;
-    color: var(--color-neutral3);
-    font-weight: 700;
-  }
-  .content button img {
-    margin-right: 10px;
-  } */
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--linear-gradient-primary-secondary);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: var(--color-white);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: var(--color-neutral4);
+}
+
+input:focus + .slider {
+  box-shadow: var(--color-neutral4);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+@media screen and (max-width: 376px) {
+}
+
 /* @media screen and (max-width: 660px) {
     html {
       font-size: calc(10px + (14 - 10) * ((100vw - 500px) / (660 - 500)));
