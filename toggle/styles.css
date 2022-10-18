@@ -230,6 +230,31 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+@media screen and (max-width: 850px) {
+  .pricing {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .pricing {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .pricing {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .pricing {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .pricing {
+    width: 60%;
+  }
+}
 @media screen and (max-width: 376px) {
   .wrapper {
     max-width: 360px;
@@ -240,7 +265,7 @@ input:checked + .slider:before {
       "card2"
       "card3";
     grid-template-columns: 1fr;
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: 200px 1fr 1fr 1fr;
     margin: 0 auto;
     height: 90%;
     align-self: center;
