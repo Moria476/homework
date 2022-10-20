@@ -8,7 +8,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
-  grid-template-rows: repeat(3, minmax(225px, auto));
+  max-width: 960px;
+  margin: 0 auto; /* taka prosta sztuczka wyrównuje do środka*/
+  grid-auto-rows: minmax(225px, auto);
 }
 .one {
   grid-column: 1/2;

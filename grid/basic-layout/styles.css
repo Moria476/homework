@@ -1,45 +1,3 @@
-/* 
-* {
-  font-size: x-large;
-  font-weight: bold;
-  margin: 0;
-}
-
-main {
-  display: grid;
-  grid-template-areas:
-    "topbar topbar topbar"
-    "content ads sidebar"
-    "footer footer footer";
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 50px auto 50px;
-  gap: 10px 20px;
-  height: 100vh;
-}
-
-header {
-  grid-area: topbar;
-  background-color: aqua;
-}
-
-article {
-  grid-area: content;
-  background-color: yellowgreen;
-}
-aside {
-  grid-area: ads;
-  background-color: yellow;
-}
-nav {
-  grid-area: sidebar;
-  background-color: orangered;
-}
-footer {
-  grid-area: footer;
-  background-color: blue;
-}
- */
-
 * {
   font-size: x-large;
   font-weight: bold;
@@ -49,13 +7,9 @@ footer {
 main {
   height: 100vh;
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 50px auto 50px;
   grid-template-areas:
-    /* "header header header header"
-    "sidebar article  article aside"
-    "footer footer footer footer"; */
     "topbar topbar topbar"
     "content ads sidebar"
     "footer footer footer";
