@@ -41,22 +41,17 @@
   --color-dark-theme-very-dark-blue-text-white: hsl(0, 0%, 100%);
 }
 
-:root {
-}
-
 html {
   font-size: 14px;
   font-family: "Inter", sans-serif;
   background: var();
 }
-
 body {
   margin: 0;
   line-height: 1.6;
-  color: var(--text-color);
+  color: var(--color-light-theme-light-grayish-blue-text);
   min-height: 100vh;
-  background: var(--bg-color);
+  background: var(--color-light-theme-background);
   background-repeat: no-repeat;
   font-size: 0.875rem;
-  font-family: "Inter", sans-serif;
 }
