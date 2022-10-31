@@ -88,7 +88,7 @@ span {
 }
 .top__part p {
   margin-top: 0px;
-  color: var(--color-light-theme-very-dark-blue-text);
+  color: var(--color-light-theme-light-grayish-blue-text);
   font-weight: bold;
 }
 .switch__wrapper {
@@ -189,16 +189,17 @@ input:checked + .slider:before {
   margin-right: 5px;
 }
 
-.middle__card p:nth-child(2),
-.instagram__card p:nth-child(3) {
+.followers p:nth-child(1) {
   font-size: 3rem;
   font-weight: bold;
   margin-top: 5px;
   margin-bottom: 0px;
   color: var(--color-light-theme-very-dark-blue-text);
 }
-.middle__card p:nth-child(3),
-.instagram__card p:nth-child(4) {
+.followers {
+  text-align: center;
+}
+.followers p:nth-child(2) {
   text-transform: uppercase;
   margin-top: 0px;
   letter-spacing: 5px;
@@ -265,10 +266,86 @@ input:checked + .slider:before {
   font-size: 2rem;
   color: var(--color-light-theme-very-dark-blue-text);
 }
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 1050px) {
+  .wrapper {
+    margin: 0 50px;
+  }
+}
+@media screen and (max-width: 950px) {
   .background {
-    height: 100px;
+    height: 250px;
+  }
+  .wrapper {
+    min-height: 1200px;
+    grid-template-rows: 10% 45% 5% 40%;
+  }
+}
+@media screen and (max-width: 740px) {
+  .wrapper {
+    min-height: 1400px;
+  }
+}
+@media screen and (max-width: 519px) {
+  .background {
+    height: 600px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+  }
+
+  .wrapper {
+    min-height: 3600px;
+    grid-template-rows: 10% 40% 3% 40%;
+  }
+
+  img {
+    min-width: 35px;
+  }
+
+  html {
+    font-size: 25px;
+  }
+  .facebook__card {
+    border-top: 10px solid var(--color-facebook);
+  }
+  .instagram__border {
+    height: 10px;
+  }
+  .twitter__card {
+    border-top: 10px solid var(--color-twitter);
+  }
+  .youtube__card {
+    border-top: 10px solid var(--color-youtube);
+  }
+
+  .top__part h1 {
+    font-size: 1.2rem;
+  }
+  .top__part {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .switch__wrapper {
+    align-self: stretch;
+    border-top: 2px solid;
+  }
+}
+@media screen and (max-width: 390px) {
+  html {
+    font-size: 20px;
+  }
+
+  .wrapper {
+    min-height: 3100px;
+    grid-template-rows: 10% 40% 3% 40%;
+  }
+}
+@media screen and (max-width: 330px) {
+  .wrapper {
+    grid-template-rows: 10% 40% 5% 40%;
+  }
+  .background {
+    min-width: 330px;
   }
 }
