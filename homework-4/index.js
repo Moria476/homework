@@ -41,3 +41,83 @@ console.log(evenNumbersOnly([1, 2, 3, 4, 5, 6, 7]));
 console.log(evenNumbersOnly(["Czasem", 12, "Słońce", 3, "czasem", 600, "deszcz"])); 
 console.log(evenNumbersOnly([{}, {}, [], [], "abc", 2])); 
 console.log(evenNumbersOnly(["a", null, true, undefined, {}, []])); 
+
+//task 4
+
+
+
+//2. zawiera przynajmniej jeden znak specjalny
+//3. zawiera przynajmniej jedną liczbę
+
+
+const isPasswordCorrect = (password) => {
+const array =password.split("");
+let isValidLength = false;
+let isValidNumber = false;
+let isValidChar = false;
+
+//if statement is there minimal lenght of characters in our password
+if(password.length>=6){
+    isValidLength=true;
+}
+//loop checking is there any numbers in our password
+for(i=0; i<array.length;i++){
+    if(!(isNaN(+array[i]))){
+        isValidNumber=true;
+        //array[i]=(+array[i]); 
+    }
+} 
+//loop checking is there any special characters in our password
+for(j=0; j<array.length;j++){
+    if(array[j]===" "||
+        array[j]==="!"||
+        array[j]==='"'||
+        array[j]==="#"||
+        array[j]==="$"||
+        array[j]==="%"||
+        array[j]==="&"||
+        array[j]==="'"||
+        array[j]==="("||
+        array[j]===")"||
+        array[j]==="*"||
+        array[j]==="+"||
+        array[j]===","||
+        array[j]==="-"||
+        array[j]==="."||
+        array[j]==="/"||
+        array[j]===":"||
+        array[j]===";"||
+        array[j]==="<"||
+        array[j]==="="||
+        array[j]===">"||
+        array[j]==="?"||
+        array[j]==="@"||
+        array[j]==="["||
+        array[j]==="\\"||
+        array[j]==="]"||
+        array[j]==="^"||
+        array[j]==="_"||
+        array[j]==="`"||
+        array[j]==="{"||
+        array[j]==="|"||
+        array[j]==="{"||
+        array[j]==="}"||
+        array[j]==="~"
+    ){
+        isValidChar=true;
+    }
+} 
+if(isValidLength===true&&isValidNumber===true&&isValidChar===true){
+console.log("true")    
+return true;
+}else
+{
+    console.log("false") 
+    return false;
+}
+}
+
+isPasswordCorrect("infoShare"); // false
+isPasswordCorrect("qwerty123"); // false
+isPasswordCorrect("qwerty123!"); // true
+isPasswordCorrect("!qw12"); // false
