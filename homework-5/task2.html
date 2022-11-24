@@ -8,21 +8,102 @@
   </head>
   <body>
     <script>
+      //     ## Założenia
+
+      //  1. Funkcje mogą być uruchamiane zarówno w konsoli przeglądarki jak i konsoli NodeJS.
+      //  2. Zadanie będzie testowane poprzez ręczne uruchomienie każdej funkcji.
+      //   3. Nazwy funkcji, pola obiektów, nazwy zmiennych i stałych powinny być zapisane po angielsku.
+
+      //       ## Zadanie 1. **(20 pkt)**
+
+      //  *Utwórz tablicę obiektów, zawierających 5 studentów.
+
+      // *Każdy obiekt powinien zawierać pola (wartości dowolne, wymyślone przez Was):
+
+      // - id (typ number)
+      // - imię (typ string),
+      // - nazwisko (typ string),
+      // - pesel (typ string),
+      // - kierunek studiów (typ string)
+      //  - oceny (tablica typów number) - 6 ocen dla każdego ze studentów
+
+      const students = [
+        {
+          id: 01,
+          name: "Arek",
+          lastName: "Dudziński",
+          socialSecurityNumber: "94054314",
+          fieldOfStudy: "internal security",
+          grades: [5, 5, 4, 3, 3, 4],
+        },
+        {
+          id: 02,
+          name: "Dominika",
+          lastName: "Pietruszka",
+          socialSecurityNumber: "94056534",
+          fieldOfStudy: "internal security",
+          grades: [5, 5, 5, 5, 5, 5],
+        },
+        {
+          id: 03,
+          name: "Jarek",
+          lastName: "Arciuch",
+          socialSecurityNumber: "94058954",
+          fieldOfStudy: "ship building",
+          grades: [3, 3, 3, 3, 3, 3],
+        },
+        {
+          id: 04,
+          name: "Krzysztof",
+          lastName: "Wojnisz",
+          socialSecurityNumber: "88053334",
+          fieldOfStudy: "mechanic",
+          grades: [3, 3, 5, 4, 3, 4],
+        },
+        {
+          id: 05,
+          name: "Magda",
+          lastName: "Hopa",
+          socialSecurityNumber: "98011114",
+          fieldOfStudy: "Occupational Safety and Health",
+          grades: [3, 5, 4, 5, 5, 5],
+        },
+      ];
+
       //  ## Zadanie 2. **(20 pkt)**
 
-      // Utwórz funkcję `addNewStudent` przyjmującą 5 paramaterów
-      //(imię, nazwisko, pesel, kierunek studiów, notes).
+      // *Utwórz funkcję `addNewStudent` przyjmującą 5 paramaterów (imię, nazwisko, pesel,
+      //kierunek studiów, notes).
       //Funkcja po uruchomieniu powinna utworzyć obiekt
       //nowego studenta oraz dodać go do tablicy,
       // utworzonej w Zadaniu 1. Id powinno zostać
       //utworzone randomowo (np. za pomocą `Math.random()`, max 3 liczby)
-      ```
-      ## Założenia
 
-1. Funkcje mogą być uruchamiane zarówno w konsoli przeglądarki jak i konsoli NodeJS.
-2. Zadanie będzie testowane poprzez ręczne uruchomienie każdej funkcji.
-3. Nazwy funkcji, pola obiektów, nazwy zmiennych i stałych powinny być zapisane po angielsku.
-```;
+      const addNewStudent = (
+        studentName,
+        studentLastName,
+        studentSocialSecurityNumber,
+        studentFieldOfStudy,
+        studentNotebook
+      ) => {
+        students.push({
+          id: Math.floor(Math.random() * (999 - 100 + 1) + 100),
+          name: studentName,
+          lastName: studentLastName,
+          socialSecurityNumber: studentSocialSecurityNumber,
+          fieldOfStudy: studentFieldOfStudy,
+          notebook: studentNotebook,
+        });
+      };
+
+      addNewStudent(
+        "Amer",
+        "Ghanem",
+        "8754345343",
+        "Philosophy",
+        "something written"
+      );
+      console.log(students);
     </script>
   </body>
 </html>
